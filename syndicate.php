@@ -116,6 +116,7 @@ if (!class_exists('cwp_ppa')) {
         		    'feed_title' => get_bloginfo('name'),
         		    'feed_url' => get_bloginfo('rss2_url')
         		);
+         	//Check if this is essential      		
         		$result = $this->post_request('http://example.com/wp_notify', $post_data, get_bloginfo('wpurl'));
         		if ($result['status'] == 'ok'){
 
@@ -187,7 +188,7 @@ if (!class_exists('cwp_ppa')) {
             }
 ?>
                 <div class="wrap">
-                <h2>PagePressApp.com Auto Wall Post</h2>
+                <h2>Auto Wall Post</h2>
                 <form method="post" id="cwp_ppa_options">
                 <?php wp_nonce_field('cwp_ppa-update-options'); ?>
                     <table width="100%" cellspacing="2" cellpadding="5" class="form-table">
